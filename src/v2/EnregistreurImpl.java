@@ -9,14 +9,23 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 
-import v1.Coller;
-import v1.Command;
-import v1.Copier;
-import v1.Couper;
 import v1.Ihm;
-import v1.InserTexte;
 import v1.MoteurEdImpl;
-import v1.Selectionner;
+import v1.commands.Coller;
+import v1.commands.Command;
+import v1.commands.Copier;
+import v1.commands.Couper;
+import v1.commands.InserTexte;
+import v1.commands.Selectionner;
+import v2.commands.enregistrable.CollerEnregistrable;
+import v2.commands.enregistrable.CopierEnregistrable;
+import v2.commands.enregistrable.CouperEnregistrable;
+import v2.commands.enregistrable.Enregistrable;
+import v2.commands.enregistrable.InsertTexteEnregistrable;
+import v2.commands.enregistrable.SelectionnerEnregistrable;
+import v2.mementos.Memento;
+import v2.mementos.MementoInsertTexte;
+import v2.mementos.MementoSelectionner;
 
 /**
  * Classe EnregistreurImpl, implémentation de Enregistreur
@@ -33,6 +42,7 @@ public class EnregistreurImpl implements Enregistreur {
 	private InserTexte inserTexte;
 	private boolean EN_ENREGISTREMENT;
 	private Ihm IHMInput;
+	private MoteurEdImpl moteurEdImpl;
 
 	/**
 	 * Constructeur de la classe EnregistreurImpl,
@@ -43,7 +53,7 @@ public class EnregistreurImpl implements Enregistreur {
 		this.commands = new ArrayList<Command>();
 		this.mementos = new ArrayList<Memento>();
 		this.IHMInput = IHMInput;
-		
+		this.moteurEdImpl = moteurEdImpl;
 		this.coller = new Coller(IHMInput,moteurEdImpl);
 		this.couper = new Couper(IHMInput,moteurEdImpl);
 		this.copier = new Copier(IHMInput,moteurEdImpl);
@@ -57,6 +67,8 @@ public class EnregistreurImpl implements Enregistreur {
 	 */
 	public void demarrer() {
 		this.EN_ENREGISTREMENT = true;
+		mementos.clear();
+		commands.clear();
 	}
 
 	/**
@@ -82,23 +94,25 @@ public class EnregistreurImpl implements Enregistreur {
 			} else if (c instanceof InsertTexteEnregistrable){
 				MementoInsertTexte m = (MementoInsertTexte) mementos.get(i);
 				IHMInput.setTextInserer(m.getTexte());
-				
 				inserTexte.execute();
-				//IHMInput.getTextArea().setSelectionStart(IHMInput.getTextArea().getSelectionStart() + 1);
-				//IHMInput.getTextArea().setSelectionEnd(IHMInput.getTextArea().getSelectionEnd() + 1);
-				//selectionner.execute();
+				moteurEdImpl.setChange(moteurEdImpl.getMonBuffer().getZoneTexte().toString());
 				
 			} else if (c instanceof SelectionnerEnregistrable){
 				MementoSelectionner m = (MementoSelectionner) mementos.get(i);
-				if(m.getDebut() > IHMInput.getTextArea().getText().length()){
-					IHMInput.getTextArea().setSelectionStart(IHMInput.getTextArea().getText().length());
-					IHMInput.getTextArea().setSelectionEnd(IHMInput.getTextArea().getText().length());
-				} else if ((m.getDebut()+m.getLongueur()) > IHMInput.getTextArea().getText().length()){
-					IHMInput.getTextArea().setSelectionStart(m.getDebut());
-					IHMInput.getTextArea().setSelectionEnd(IHMInput.getTextArea().getText().length());
+				
+				int bufferSize = IHMInput.getTextArea().getText().length();
+				int longueur = m.getLongueur();
+				int positionDebut = m.getDebut();
+				
+				if(positionDebut > bufferSize){
+					IHMInput.getTextArea().setSelectionStart(bufferSize);
+					IHMInput.getTextArea().setSelectionEnd(bufferSize);
+				} else if ((positionDebut + longueur) > bufferSize){
+					IHMInput.getTextArea().setSelectionStart(positionDebut);
+					IHMInput.getTextArea().setSelectionEnd(bufferSize);
 				} else {
-					IHMInput.getTextArea().setSelectionStart(m.getDebut());
-					IHMInput.getTextArea().setSelectionEnd(m.getDebut()+m.getLongueur());
+					IHMInput.getTextArea().setSelectionStart(positionDebut);
+					IHMInput.getTextArea().setSelectionEnd(positionDebut + longueur);
 				}
 				selectionner.execute();
 			}

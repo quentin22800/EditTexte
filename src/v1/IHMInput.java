@@ -14,6 +14,11 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.text.html.HTMLEditorKit.InsertHTMLTextAction;
 
+import v1.commands.Coller;
+import v1.commands.Copier;
+import v1.commands.Couper;
+import v1.commands.Selectionner;
+
 /**
  * Classe IHMInput, implémentation de l'interface Ihm et de l'interface Observer
  * @author Eono Quentin, Rebours Gaël

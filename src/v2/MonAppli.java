@@ -17,15 +17,23 @@ import javax.swing.JButton;
 import javax.swing.JTextArea;
 
 import v1.Buffer;
-import v1.Coller;
-import v1.Command;
-import v1.Copier;
-import v1.Couper;
-import v1.InserTexte;
 import v1.MoteurEdImpl;
 import v1.PressePapier;
 import v1.Selection;
-import v1.Selectionner;
+import v1.commands.Coller;
+import v1.commands.Command;
+import v1.commands.Copier;
+import v1.commands.Couper;
+import v1.commands.InserTexte;
+import v1.commands.Selectionner;
+import v2.commands.Arreter;
+import v2.commands.Demarrer;
+import v2.commands.Rejouer;
+import v2.commands.enregistrable.CollerEnregistrable;
+import v2.commands.enregistrable.CopierEnregistrable;
+import v2.commands.enregistrable.CouperEnregistrable;
+import v2.commands.enregistrable.InsertTexteEnregistrable;
+import v2.commands.enregistrable.SelectionnerEnregistrable;
 
 /**
  * Classe MonAppli v2, classe principale

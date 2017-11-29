@@ -17,6 +17,12 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JTextArea;
 
+import v1.commands.Coller;
+import v1.commands.Copier;
+import v1.commands.Couper;
+import v1.commands.InserTexte;
+import v1.commands.Selectionner;
+
 /**
  * Classe MonAppli, classe principale
  * @author Eono Quentin, Rebours Gaël

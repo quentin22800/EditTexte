@@ -7,7 +7,8 @@ package v2;
 
 import java.util.*;
 
-import v1.Command;
+import v1.commands.Command;
+import v2.commands.enregistrable.Enregistrable;
 
 /**
  * Interface Enregistreur

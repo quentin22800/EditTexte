@@ -12,13 +12,13 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
-import v1.Coller;
-import v1.Copier;
-import v1.Couper;
 import v1.Ihm;
-import v1.InserTexte;
 import v1.MoteurEdImpl;
-import v1.Selectionner;
+import v1.commands.Coller;
+import v1.commands.Copier;
+import v1.commands.Couper;
+import v1.commands.InserTexte;
+import v1.commands.Selectionner;
 
 /**
  * Classe IHMInput (v2), implémentation de l'interface Ihm v1 et de l'interface Observer

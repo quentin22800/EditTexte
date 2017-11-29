@@ -124,5 +124,15 @@ public class MoteurEdImpl extends Observable implements MoteurEd {
 	public void setMaSelection(Selection maSelection) {
 		this.maSelection = maSelection;
 	}
+	
+	/**
+	 * Méthode setChange, notifie les observateur des changements
+	 * 
+	 * @param o, contenu du buffer à afficher 
+	 */
+	public void setChange(Object o) {
+		setChanged();
+		notifyObservers(o);
+	}
 
 }
