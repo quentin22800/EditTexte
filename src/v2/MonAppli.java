@@ -63,12 +63,12 @@ public class MonAppli {
 
 		InserTexte insererTexte = new InserTexte(iHMInput,moteurEdImpl);
 		InsertTexteEnregistrable insertTexteEnregistrable = new InsertTexteEnregistrable(iHMInput, moteurEdImpl, enregistreurImpl);
-		Couper couper = new Couper(iHMInput,moteurEdImpl);
-		CouperEnregistrable couperEnregistrable = new CouperEnregistrable(iHMInput, moteurEdImpl, enregistreurImpl);
-		Coller coller = new Coller(iHMInput,moteurEdImpl);
-		CollerEnregistrable collerEnregistrable = new CollerEnregistrable(iHMInput, moteurEdImpl, enregistreurImpl);
-		Copier copier = new Copier(iHMInput,moteurEdImpl);
-		CopierEnregistrable copierEnregistrable = new CopierEnregistrable(iHMInput, moteurEdImpl, enregistreurImpl);
+		Couper couper = new Couper(moteurEdImpl);
+		CouperEnregistrable couperEnregistrable = new CouperEnregistrable(moteurEdImpl, enregistreurImpl);
+		Coller coller = new Coller(moteurEdImpl);
+		CollerEnregistrable collerEnregistrable = new CollerEnregistrable(moteurEdImpl, enregistreurImpl);
+		Copier copier = new Copier(moteurEdImpl);
+		CopierEnregistrable copierEnregistrable = new CopierEnregistrable(moteurEdImpl, enregistreurImpl);
 		Selectionner selectionner = new Selectionner(iHMInput, moteurEdImpl);
 		SelectionnerEnregistrable selectionnerEnregistrable = new SelectionnerEnregistrable(iHMInput, moteurEdImpl, enregistreurImpl);
 		Demarrer demarrer = new Demarrer(enregistreurImpl);

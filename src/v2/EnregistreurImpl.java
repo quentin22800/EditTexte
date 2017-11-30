@@ -54,9 +54,9 @@ public class EnregistreurImpl implements Enregistreur {
 		this.mementos = new ArrayList<Memento>();
 		this.IHMInput = IHMInput;
 		this.moteurEdImpl = moteurEdImpl;
-		this.coller = new Coller(IHMInput,moteurEdImpl);
-		this.couper = new Couper(IHMInput,moteurEdImpl);
-		this.copier = new Copier(IHMInput,moteurEdImpl);
+		this.coller = new Coller(moteurEdImpl);
+		this.couper = new Couper(moteurEdImpl);
+		this.copier = new Copier(moteurEdImpl);
 		this.selectionner = new Selectionner(IHMInput,moteurEdImpl);
 		this.inserTexte = new InserTexte(IHMInput,moteurEdImpl);
 	}

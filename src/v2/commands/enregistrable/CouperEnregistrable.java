@@ -30,8 +30,8 @@ public class CouperEnregistrable extends Couper implements Enregistrable {
 	 * @param moteurEdImpl
 	 * @param enregistreurImpl
 	 */
-	public CouperEnregistrable(Ihm iHMInput, MoteurEdImpl moteurEdImpl, EnregistreurImpl enregistreurImpl) {
-		super(iHMInput, moteurEdImpl);
+	public CouperEnregistrable(MoteurEdImpl moteurEdImpl, EnregistreurImpl enregistreurImpl) {
+		super(moteurEdImpl);
 		this.enregistreurImpl = enregistreurImpl;
 		this.memento = new MementoCouper();
 	}

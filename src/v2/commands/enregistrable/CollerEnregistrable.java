@@ -30,8 +30,8 @@ public class CollerEnregistrable extends Coller implements Enregistrable {
 	 * @param moteurEdImpl
 	 * @param enregistreurImpl
 	 */
-	public CollerEnregistrable(Ihm iHMInput, MoteurEdImpl moteurEdImpl, EnregistreurImpl enregistreurImpl) {
-		super(iHMInput, moteurEdImpl);
+	public CollerEnregistrable(MoteurEdImpl moteurEdImpl, EnregistreurImpl enregistreurImpl) {
+		super(moteurEdImpl);
 		this.enregistreurImpl = enregistreurImpl;
 		this.memento = new MementoColler();
 	}

@@ -17,15 +17,13 @@ import v1.MoteurEdImpl;
 public class Copier implements Command {
 
 	private MoteurEdImpl moteurEdImpl;
-	private Ihm iHMInput;
 
 	/**
 	 * Constructeur de la classe Copier
 	 * @param iHMInput TO DOOOOOOOOOOOOOOOOOOOOOOOO
 	 * @param moteurEdImpl TO DOOOOOOOOOOOOOOOOOOOOOO
 	 */
-	public Copier (Ihm iHMInput, MoteurEdImpl moteurEdImpl){
-		this.iHMInput = iHMInput;
+	public Copier (MoteurEdImpl moteurEdImpl){
 		this.moteurEdImpl = moteurEdImpl;
 	}
 

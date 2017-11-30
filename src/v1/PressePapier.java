@@ -15,6 +15,8 @@ public class PressePapier {
 
 	private String contenu;
 
+	
+	
 	/**
 	 * Getter du contenu 
 	 * @return contenu, contenu du presse papier

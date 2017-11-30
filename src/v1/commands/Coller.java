@@ -17,15 +17,13 @@ import v1.MoteurEdImpl;
 public class Coller implements Command {
 
 	private MoteurEdImpl moteurEdImpl;
-	private Ihm iHMInput;
 
 	/**
 	 * Constructeur de la classe Coller
 	 * @param iHMInput TO DOOOOOOOOOOOOOOOOOOOOOOOO
 	 * @param moteurEdImpl TO DOOOOOOOOOOOOOOOOOOOOOO
 	 */
-	public Coller (Ihm iHMInput, MoteurEdImpl moteurEdImpl){
-		this.iHMInput = iHMInput;
+	public Coller (MoteurEdImpl moteurEdImpl){
 		this.moteurEdImpl = moteurEdImpl;
 	}
 

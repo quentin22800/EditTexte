@@ -30,8 +30,8 @@ public class CopierEnregistrable extends Copier implements Enregistrable {
 	 * @param moteurEdImpl
 	 * @param enregistreurImpl
 	 */
-	public CopierEnregistrable(Ihm iHMInput, MoteurEdImpl moteurEdImpl, EnregistreurImpl enregistreurImpl) {
-		super(iHMInput, moteurEdImpl);
+	public CopierEnregistrable(MoteurEdImpl moteurEdImpl, EnregistreurImpl enregistreurImpl) {
+		super(moteurEdImpl);
 		this.enregistreurImpl = enregistreurImpl;
 		this.memento = new MementoCopier();
 	}

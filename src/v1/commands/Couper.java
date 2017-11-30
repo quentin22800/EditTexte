@@ -17,15 +17,13 @@ import v1.MoteurEdImpl;
 public class Couper implements Command {
 
 	private MoteurEdImpl moteurEdImpl;
-	private Ihm iHMInput;
 
 	/**
 	 * Constructeur de la classe Couper
 	 * @param iHMInput TO DOOOOOOOOOOOOOOOOOOOOOOOO
 	 * @param moteurEdImpl TO DOOOOOOOOOOOOOOOOOOOOOO
 	 */
-	public Couper (Ihm iHMInput, MoteurEdImpl moteurEdImpl){
-		this.iHMInput = iHMInput;
+	public Couper (MoteurEdImpl moteurEdImpl){
 		this.moteurEdImpl = moteurEdImpl;
 	}
 

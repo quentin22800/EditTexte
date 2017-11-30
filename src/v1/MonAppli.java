@@ -49,9 +49,9 @@ public class MonAppli {
 		PressePapier pressePapier = new PressePapier();
 
 		InserTexte insererTexte = new InserTexte(iHMInput,moteurEdImpl);
-		Couper couper = new Couper(iHMInput,moteurEdImpl);
-		Coller coller = new Coller(iHMInput,moteurEdImpl);
-		Copier copier = new Copier(iHMInput,moteurEdImpl);
+		Couper couper = new Couper(moteurEdImpl);
+		Coller coller = new Coller(moteurEdImpl);
+		Copier copier = new Copier(moteurEdImpl);
 		Selectionner selectionner = new Selectionner(iHMInput, moteurEdImpl);
 
 		moteurEdImpl.setMaSelection(selection);

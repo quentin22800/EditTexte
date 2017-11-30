@@ -37,7 +37,6 @@ public class InserTexte implements Command {
 	public void execute() {
 		
 		moteurEdImpl.inserTexte(iHMInput.getTextInserer());
-		//moteurEdImpl.inserTexte(texte);
 	}
 	
 	public void setTexte(String texte){
