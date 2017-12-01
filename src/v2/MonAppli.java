@@ -50,7 +50,7 @@ public class MonAppli {
 	 * du presse papier, des commandes, des éléments de l'IHM et
 	 * implémentation des listeners sur les boutons et du listener sur la souris
 	 * pour la séléction
-	 * @param args
+	 * @param args, argument pour le main
 	 */
 	public static void main(String args[]) {
 		iHMInput = new IHMInput();
