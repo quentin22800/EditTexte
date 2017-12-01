@@ -24,7 +24,7 @@ public class MementoInsertTexte implements Memento {
 
 	/**
 	 * Getter du contenu du MementoInsertTexte
-	 * @param s, contenu string du memento
+	 * @return s, contenu string du memento
 	 */
 	public String getTexte(){
 		return this.s;

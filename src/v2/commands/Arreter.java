@@ -22,7 +22,7 @@ public class Arreter implements Command {
 
 	/**
 	 * Constructeur de la classe Arreter
-	 * @param enregistreurImpl 
+	 * @param enregistreurImpl gestionnaire d'enregistrement des commandes et des mementos
 	 */
 	public Arreter(EnregistreurImpl enregistreurImpl) {
 		this.enregistreurImpl = enregistreurImpl;

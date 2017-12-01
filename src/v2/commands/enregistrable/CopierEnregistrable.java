@@ -26,9 +26,8 @@ public class CopierEnregistrable extends Copier implements Enregistrable {
 
 	/**
 	 * Constructeur de la classe CopierEnregistrable
-	 * @param iHMInput
-	 * @param moteurEdImpl
-	 * @param enregistreurImpl
+	 * @param moteurEdImpl moteur de notre application (gère les commandes)
+	 * @param enregistreurImpl gestionnaire d'enregistrement des commandes et des mementos
 	 */
 	public CopierEnregistrable(MoteurEdImpl moteurEdImpl, EnregistreurImpl enregistreurImpl) {
 		super(moteurEdImpl);

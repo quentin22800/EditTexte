@@ -19,8 +19,8 @@ public class Selection {
 
 	/**
 	 * Constructeur de la classe Selection
-	 * @param iHMInput TO DOOOOOOOOOOOOOOOOOOOOOOOO
-	 * @param moteurEdImpl TO DOOOOOOOOOOOOOOOOOOOOOO
+	 * @param positionDebut début de la sélection
+	 * @param longueur longueur de la sélection
 	 */
 	public Selection (int positionDebut, int longueur){
 		this.positionDebut = positionDebut;

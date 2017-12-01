@@ -26,9 +26,9 @@ public class SelectionnerEnregistrable extends Selectionner implements Enregistr
 
 	/**
 	 * Constructeur de la classe SelectionnerEnregistrable
-	 * @param iHMInput
-	 * @param moteurEdImpl
-	 * @param enregistreurImpl
+	 * @param iHMInput IHM de notre application
+	 * @param moteurEdImpl moteur de notre application (gère les commandes)
+	 * @param enregistreurImpl gestionnaire d'enregistrement des commandes et des mementos
 	 */
 	public SelectionnerEnregistrable(Ihm iHMInput, MoteurEdImpl moteurEdImpl, EnregistreurImpl enregistreurImpl) {
 		super(iHMInput, moteurEdImpl);

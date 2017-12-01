@@ -26,9 +26,8 @@ public class CouperEnregistrable extends Couper implements Enregistrable {
 
 	/**
 	 * Constructeur de la classe CouperEnregistrable
-	 * @param iHMInput
-	 * @param moteurEdImpl
-	 * @param enregistreurImpl
+	 * @param moteurEdImpl moteur de notre application (gère les commandes)
+	 * @param enregistreurImpl gestionnaire d'enregistrement des commandes et des mementos
 	 */
 	public CouperEnregistrable(MoteurEdImpl moteurEdImpl, EnregistreurImpl enregistreurImpl) {
 		super(moteurEdImpl);

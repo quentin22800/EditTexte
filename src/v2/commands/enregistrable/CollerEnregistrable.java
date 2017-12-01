@@ -26,9 +26,8 @@ public class CollerEnregistrable extends Coller implements Enregistrable {
 
 	/**
 	 * Constructeur de la classe CollerEnregistrable
-	 * @param iHMInput
-	 * @param moteurEdImpl
-	 * @param enregistreurImpl
+	 * @param moteurEdImpl moteur de notre application (gère les commandes)
+	 * @param enregistreurImpl gestionnaire d'enregistrement des commandes et des mementos
 	 */
 	public CollerEnregistrable(MoteurEdImpl moteurEdImpl, EnregistreurImpl enregistreurImpl) {
 		super(moteurEdImpl);

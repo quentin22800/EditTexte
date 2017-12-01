@@ -22,7 +22,7 @@ public class Demarrer implements Command {
 
 	/**
 	 * Constructeur de la classe Demarrer
-	 * @param enregistreurImpl 
+	 * @param enregistreurImpl gestionnaire d'enregistrement des commandes et des mementos
 	 */
 	public Demarrer(EnregistreurImpl enregistreurImpl) {
 		this.enregistreurImpl = enregistreurImpl;

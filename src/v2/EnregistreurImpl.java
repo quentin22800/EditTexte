@@ -47,6 +47,9 @@ public class EnregistreurImpl implements Enregistreur {
 	/**
 	 * Constructeur de la classe EnregistreurImpl,
 	 * initialisation des variables
+	 * @param IHMInput IHM de notre application
+	 * @param moteurEdImpl moteur de notre application (gère les commandes)
+	 * 
 	 */
 	public EnregistreurImpl(Ihm IHMInput, MoteurEdImpl moteurEdImpl){
 		this.EN_ENREGISTREMENT = false;

@@ -20,8 +20,7 @@ public class Copier implements Command {
 
 	/**
 	 * Constructeur de la classe Copier
-	 * @param iHMInput TO DOOOOOOOOOOOOOOOOOOOOOOOO
-	 * @param moteurEdImpl TO DOOOOOOOOOOOOOOOOOOOOOO
+	 * @param moteurEdImpl moteur de notre application (gère les commandes)
 	 */
 	public Copier (MoteurEdImpl moteurEdImpl){
 		this.moteurEdImpl = moteurEdImpl;

@@ -21,7 +21,7 @@ public class Rejouer implements Command {
 	
 	/**
 	 * Constructeur de la classe Rejouer
-	 * @param enregistreurImpl 
+	 * @param enregistreurImpl gestionnaire d'enregistrement des commandes et des mementos
 	 */
 	public Rejouer(EnregistreurImpl enregistreurImpl) {
 		this.enregistreurImpl = enregistreurImpl;

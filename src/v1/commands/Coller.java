@@ -20,8 +20,7 @@ public class Coller implements Command {
 
 	/**
 	 * Constructeur de la classe Coller
-	 * @param iHMInput TO DOOOOOOOOOOOOOOOOOOOOOOOO
-	 * @param moteurEdImpl TO DOOOOOOOOOOOOOOOOOOOOOO
+	 * @param moteurEdImpl moteur de notre application (gère les commandes)
 	 */
 	public Coller (MoteurEdImpl moteurEdImpl){
 		this.moteurEdImpl = moteurEdImpl;

@@ -12,6 +12,7 @@ public class RunTest {
 	
 	/**
 	 * Main qui lance tous les test
+	 * @param args arguments pour le main
 	 */
 	public static void main(String[] args) {
 		   

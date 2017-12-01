@@ -20,8 +20,7 @@ public class Couper implements Command {
 
 	/**
 	 * Constructeur de la classe Couper
-	 * @param iHMInput TO DOOOOOOOOOOOOOOOOOOOOOOOO
-	 * @param moteurEdImpl TO DOOOOOOOOOOOOOOOOOOOOOO
+	 * @param moteurEdImpl moteur de notre application (gère les commandes)
 	 */
 	public Couper (MoteurEdImpl moteurEdImpl){
 		this.moteurEdImpl = moteurEdImpl;

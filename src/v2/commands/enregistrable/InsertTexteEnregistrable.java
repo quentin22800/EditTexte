@@ -26,9 +26,9 @@ public class InsertTexteEnregistrable extends InserTexte implements Enregistrabl
 
 	/**
 	 * Constructeur de la classe InsertTexteEnregistrable
-	 * @param iHMInput
-	 * @param moteurEdImpl
-	 * @param enregistreurImpl
+	 * @param iHMInput IHM de notre application
+	 * @param moteurEdImpl moteur de notre application (gère les commandes)
+	 * @param enregistreurImpl gestionnaire d'enregistrement des commandes et des mementos
 	 */
 	public InsertTexteEnregistrable(Ihm iHMInput, MoteurEdImpl moteurEdImpl, EnregistreurImpl enregistreurImpl) {
 		super(iHMInput, moteurEdImpl);
