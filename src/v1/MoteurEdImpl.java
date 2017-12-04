@@ -27,7 +27,7 @@ public class MoteurEdImpl extends Observable implements MoteurEd {
 		int positionFin = positionDebut + maSelection.getLongueur();
 		copier();
 		monBuffer.oter(positionDebut, maSelection.getLongueur());
-
+		maSelection.setLongueur(0);
 		setChanged();
 		notifyObservers(monBuffer.getZoneTexte());
 	}
@@ -114,6 +114,7 @@ public class MoteurEdImpl extends Observable implements MoteurEd {
 	 * @return maSelection, objet Selection
 	 */
 	public Selection getMaSelection() {
+		
 		return maSelection;
 	}
 
@@ -135,4 +136,15 @@ public class MoteurEdImpl extends Observable implements MoteurEd {
 		notifyObservers(o);
 	}
 
+	public MoteurEdImpl getCopie(){
+		MoteurEdImpl m = new MoteurEdImpl();
+		m.setMaSelection(new Selection(maSelection.getPositionDebut(),maSelection.getLongueur()));
+		Buffer b = new Buffer();
+		b.inserer(monBuffer.getZoneTexte().toString(), 0, 0);
+		m.setMonBuffer(b);
+		PressePapier p = new PressePapier();
+		p.setContenu(monPressePapier.getContenu());
+		m.setMonPressePapier(p);
+		return m;
+	}
 }
