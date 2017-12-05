@@ -5,10 +5,14 @@ package v2;
  * Purpose: Defines the Class IHMInput
  ***********************************************************************/
 
-import java.util.*;
+import java.awt.BorderLayout;
+import java.util.Observable;
+import java.util.Observer;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
@@ -42,6 +46,8 @@ public class IHMInput implements Ihm, Observer{
 	public Coller coller;
 	public InserTexte inserTexte;
 	public Selectionner selectionner;
+	private ImageIcon image;
+	private JLabel label;
 
 	/**
 	 * Constructeur de la classe IHMInput, initialisation des variables concernant les éléments de l'interface graphique
@@ -72,6 +78,12 @@ public class IHMInput implements Ihm, Observer{
 		buttonRejouer = new JButton("rejouer");
 		pan.add(buttonRejouer);
 
+		
+		image = new ImageIcon("assets/btnEnr.jpg");
+		label = new JLabel("", image, JLabel.CENTER);
+		label.setVisible(false);
+		pan.add( label, BorderLayout.CENTER );
+		
 		textArea = new JTextArea(20, 30);
 		pan.add(textArea);
 		textArea.setEditable(true);
@@ -215,6 +227,14 @@ public class IHMInput implements Ihm, Observer{
 	 */
 	public void setButtonRejouer(JButton buttonRejouer) {
 		this.buttonRejouer = buttonRejouer;
+	}
+	
+	public void setImageEnregistrement(){
+		label.setVisible(true);
+	}
+	
+	public void removeImageEnregistrement(){
+		label.setVisible(false);
 	}
 
 }

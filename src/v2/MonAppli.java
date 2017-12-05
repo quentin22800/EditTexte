@@ -128,6 +128,7 @@ public class MonAppli {
 			public void actionPerformed(ActionEvent e) {
 				if(enregistreurImpl.EN_ENREGISTREMENT()){
 					arreter.execute();
+					iHMInput.removeImageEnregistrement();
 				}
 			}
 		});
@@ -138,6 +139,7 @@ public class MonAppli {
 			public void actionPerformed(ActionEvent e) {
 				if(!enregistreurImpl.EN_ENREGISTREMENT()){
 					demarrer.execute();
+					iHMInput.setImageEnregistrement();
 				}
 			}
 		});
