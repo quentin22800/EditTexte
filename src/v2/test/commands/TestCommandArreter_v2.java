@@ -33,6 +33,9 @@ public class TestCommandArreter_v2 {
 
 	private Arreter arreter;
 	
+	/**
+	 * Initialisation des variables avant chaque test
+	 */
 	@Before
 	public void init() {
 		this.buffer = new Buffer();
@@ -47,6 +50,9 @@ public class TestCommandArreter_v2 {
 		this.arreter = new Arreter(enregistreur);
 	}
 	
+	/**
+	 * Test si la commande EN_ENREGISTREMENT passe bien à false après l'exécution de la commande arreter
+	 */
 	@Test
 	public void testCommandArreter(){
 		arreter.execute();

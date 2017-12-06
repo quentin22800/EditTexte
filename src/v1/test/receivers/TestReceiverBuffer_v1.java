@@ -25,6 +25,9 @@ public class TestReceiverBuffer_v1 {
 		this.buffer = new Buffer();
 	}
 	
+	/**
+	 * Test du contenu du buffer après l'insertion de texte
+	 */
 	@Test
 	public void testContenuBuffer(){
 		buffer.inserer("Test contenu buffer", 0, 0);
@@ -38,6 +41,9 @@ public class TestReceiverBuffer_v1 {
 		}
 	}
 	
+	/**
+	 * Test du contenu du buffer après deux commande inserer texte consécutives 
+	 */
 	@Test
 	public void testAppendBuffer(){
 		buffer.inserer("testAppendBuffer", 0, 0);
@@ -52,6 +58,9 @@ public class TestReceiverBuffer_v1 {
 		}
 	}
 	
+	/**
+	 * Test du contenu du buffer après l'insertion d'un texte "par dessus" un autre texte
+	 */
 	@Test
 	public void testAppendBufferOverPrevious(){
 		buffer.inserer("testAppendBuffer", 0, 0);

@@ -42,6 +42,9 @@ public class TestReceiverMoteurEdImpl_v1 {
 		this.moteur.setMonPressePapier(this.pressepapier);
 	}
 
+	/**
+	 * Test le contenu du presse papier après l'exécution de la commande Copier
+	 */
 	@Test
 	public void testCommandCopierMoteur() {
 		buffer.inserer("testCommandCopierMoteur", 0,0);
@@ -64,6 +67,9 @@ public class TestReceiverMoteurEdImpl_v1 {
 
 	}
 
+	/**
+	 * Test le contenu du buffer après l'exécution de la commande Coller
+	 */
 	@Test
 	public void testCommandCollerMoteur() {
 		buffer.inserer("", 0,0);
@@ -80,6 +86,9 @@ public class TestReceiverMoteurEdImpl_v1 {
 		}
 	}
 
+	/**
+	 * Test le contenu du presse papier après l'eécution de la commande couper
+	 */
 	@Test
 	public void testCommandCouperMoteur() {
 		buffer.inserer("testCommandCouperMoteur", 0,0);
@@ -102,6 +111,9 @@ public class TestReceiverMoteurEdImpl_v1 {
 		}
 	}
 
+	/**
+	 * Test le contenu du buffer apès l'exécution de la commande inserer texte
+	 */
 	@Test
 	public void testCommandInsererMoteur(){
 		moteur.inserTexte("testCommandInsererMoteur");
@@ -116,6 +128,9 @@ public class TestReceiverMoteurEdImpl_v1 {
 		}
 	}
 
+	/**
+	 * Test le contenu de la selection après l'exécution de la commande selectionner
+	 */
 	@Test
 	public void testCommandSelectionnerMoteur(){
 		moteur.selectionner(1, 9);
@@ -130,6 +145,9 @@ public class TestReceiverMoteurEdImpl_v1 {
 		}
 	}
 
+	/**
+	 * Test de le référence de l'objet buffer
+	 */
 	@Test
 	public void testBufferMoteur(){
 		if(moteur.getMonBuffer() == this.buffer){
@@ -142,6 +160,9 @@ public class TestReceiverMoteurEdImpl_v1 {
 		}
 	}
 
+	/**
+	 * Test de la référence de l'objet presse papier
+	 */
 	@Test
 	public void testPressePapierMoteur(){
 		if(moteur.getMonPressePapier() == pressepapier){
@@ -154,6 +175,9 @@ public class TestReceiverMoteurEdImpl_v1 {
 		}
 	}
 
+	/**
+	 * Test de la référence de l'objet selection
+	 */
 	@Test
 	public void testSelectionMoteur(){
 		if(moteur.getMaSelection() == selection){

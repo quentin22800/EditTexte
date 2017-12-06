@@ -27,6 +27,9 @@ public class TestReceiverPressePapier_v1 {
 		this.pressepapier.setContenu("");
 	}
 	
+	/**
+	 * Test le contenu du presse papier après un setContenu
+	 */
 	@Test
 	public void testContenuPressePapier(){
 		pressepapier.setContenu("test contenu presse papier");

@@ -46,7 +46,9 @@ public class TestMementoColler_v2 {
 		this.coller = new CollerEnregistrable(this.moteur,this.enregistreur);
 	}
 
-
+	/**
+	 * Test l'instance d'un memento 
+	 */
 	@Test
 	public void testInstanceMementoCollerGet(){
 		if(coller.getMemento() instanceof MementoColler){
@@ -60,6 +62,9 @@ public class TestMementoColler_v2 {
 
 	}
 
+	/**
+	 * Test l'instance d'un memento après un setMemento
+	 */
 	@Test
 	public void testInstanceMementoCollerSet(){
 		coller.setMemento();

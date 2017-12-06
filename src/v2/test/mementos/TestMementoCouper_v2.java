@@ -45,7 +45,9 @@ public class TestMementoCouper_v2 {
 		this.couper = new CouperEnregistrable(this.moteur,this.enregistreur);
 	}
 
-
+	/**
+	 * Test l'instance du memento
+	 */
 	@Test
 	public void testInstanceMementoCouperGet(){
 		if(couper.getMemento() instanceof MementoCouper){
@@ -59,6 +61,9 @@ public class TestMementoCouper_v2 {
 
 	}
 
+	/**
+	 * Test l'instance du memento après un setMemento
+	 */
 	@Test
 	public void testInstanceMementoCouperSet(){
 		couper.setMemento();

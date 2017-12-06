@@ -49,6 +49,9 @@ public class TestCommandRejouer_v2 {
 	
 	private IHMInput ihm;
 	
+	/**
+	 * Initialisation des variables avant chaque test
+	 */
 	@Before
 	public void init() {
 		ihm = new IHMInput();
@@ -68,6 +71,9 @@ public class TestCommandRejouer_v2 {
 		this.inserTexte = new InserTexte(ihm, moteur);
 	}
 	
+	/**
+	 * Test le contenu du buffer après l'insertion d'un texte et l'exécution de la commande rejouer
+	 */
 	@Test
 	public void testCommandRejouer() {
 		

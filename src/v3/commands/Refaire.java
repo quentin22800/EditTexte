@@ -1,6 +1,7 @@
-package v3;
+package v3.commands;
 
 import v1.commands.Command;
+import v3.GestionnaireDRImpl;
 
 /**
  * Classe Refaire, implémentation de la commande concrète "Refaire"

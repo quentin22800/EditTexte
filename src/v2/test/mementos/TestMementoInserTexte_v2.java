@@ -47,6 +47,9 @@ public class TestMementoInserTexte_v2 {
 		this.insertTexte = new InsertTexteEnregistrable(ihm, moteur, enregistreur);
 	}
 	
+	/**
+	 * Test l'instance du memento
+	 */
 	@Test
 	public void testInstanceMementoInserTexteGet(){
 		if(insertTexte.getMemento() instanceof MementoInsertTexte){
@@ -60,6 +63,9 @@ public class TestMementoInserTexte_v2 {
 
 	}
 
+	/**
+	 * Test l'instance du memento après un setMemento
+	 */
 	@Test
 	public void testInstanceMementoInserTexteSet(){
 		insertTexte.setMemento();

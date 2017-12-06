@@ -229,10 +229,16 @@ public class IHMInput implements Ihm, Observer{
 		this.buttonRejouer = buttonRejouer;
 	}
 	
+	/**
+	 * Méthode setImageEnregistrement, permet d'afficher l'image du bouton d'enregistrement
+	 */
 	public void setImageEnregistrement(){
 		label.setVisible(true);
 	}
 	
+	/**
+	 * Méthode removeImageEnregistrement, permet de cacher l'image du bouton d'enregistrement
+	 */
 	public void removeImageEnregistrement(){
 		label.setVisible(false);
 	}

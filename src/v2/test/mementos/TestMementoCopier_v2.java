@@ -46,7 +46,9 @@ public class TestMementoCopier_v2 {
 		this.copier = new CopierEnregistrable(this.moteur,this.enregistreur);
 	}
 
-
+	/**
+	 * Test l'instance du memento
+	 */
 	@Test
 	public void testInstanceMementoCopierGet(){
 		if(copier.getMemento() instanceof MementoCopier){
@@ -60,6 +62,9 @@ public class TestMementoCopier_v2 {
 
 	}
 
+	/**
+	 * Test l'instance du memento après un setMemento
+	 */
 	@Test
 	public void testInstanceMementoCopierSet(){
 		copier.setMemento();

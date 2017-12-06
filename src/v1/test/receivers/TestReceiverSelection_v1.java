@@ -25,6 +25,9 @@ public class TestReceiverSelection_v1 {
 		this.selection = new Selection(0,0);		
 	}
 	
+	/**
+	 * Test la mise à jour de la sélection
+	 */
 	@Test 
 	public void testUpdateSelection(){
 		try {
@@ -43,8 +46,9 @@ public class TestReceiverSelection_v1 {
 		
 	}
 
-	
-	
+	/**
+	 * Test la valeur de la position de début après la mise à jour de la sélection
+	 */
 	@Test
 	public void testPositionDebut(){
 		try {
@@ -65,6 +69,9 @@ public class TestReceiverSelection_v1 {
 		
 	}
 	
+	/**
+	 * Test la valeur de la longueur après la mise à jour de la sélection
+	 */
 	@Test
 	public void testLongueur(){
 		try {
@@ -83,6 +90,9 @@ public class TestReceiverSelection_v1 {
 		}
 	}
 	
+	/**
+	 * Test la valeur de la position de fin après la mise à jour de la sélection
+	 */
 	@Test
 	public void testPositionFin(){
 		try{

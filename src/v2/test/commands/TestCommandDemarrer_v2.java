@@ -33,6 +33,9 @@ public class TestCommandDemarrer_v2 {
 
 	private Demarrer demarrer;
 
+	/**
+	 * Initialisation des variables avant chaque test
+	 */
 	@Before
 	public void init() {
 		this.buffer = new Buffer();
@@ -47,6 +50,9 @@ public class TestCommandDemarrer_v2 {
 		this.demarrer = new Demarrer(enregistreur);
 	}
 	
+	/**
+	 * Test si la variable EN_ENREGISTREMENT passe bien à true après l'exécution de la commande demarrer
+	 */
 	@Test
 	public void testCommandDemarrer(){
 		demarrer.execute();

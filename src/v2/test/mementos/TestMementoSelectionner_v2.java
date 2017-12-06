@@ -49,6 +49,9 @@ public class TestMementoSelectionner_v2 {
 		this.selectionnerEnr = new SelectionnerEnregistrable(ihm, moteur, enregistreur);
 	}
 	
+	/**
+	 * Test l'instance du memento
+	 */
 	@Test
 	public void testInstanceMementoSelectionnerGet(){
 		if(selectionnerEnr.getMemento() instanceof MementoSelectionner){
@@ -61,7 +64,10 @@ public class TestMementoSelectionner_v2 {
 		}
 
 	}
-
+	
+	/**
+	 * Test l'instance du memento après un setMemento
+	 */
 	@Test
 	public void testInstanceMementoSelectionnerSet(){
 		selectionnerEnr.setMemento();

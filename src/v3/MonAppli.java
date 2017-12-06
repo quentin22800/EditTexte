@@ -25,6 +25,8 @@ import v1.commands.Copier;
 import v1.commands.Couper;
 import v1.commands.InserTexte;
 import v1.commands.Selectionner;
+import v3.commands.Defaire;
+import v3.commands.Refaire;
 
 /**
  * Classe MonAppli v2, classe principale
